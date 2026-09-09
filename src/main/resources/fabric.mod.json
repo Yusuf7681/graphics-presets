@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "graphics-presets",
+	"version": "2.0",
+	"name": "Graphics Presets",
+	"description": "is a dedicated quality-of-life mod built specifically for the **Perfect Realism** modpack. It allows players to seamlessly switch between predefined visual and performance profiles with a single click right from the Title Screen, eliminating the need to manually tweak complex configuration files.",
+	"authors": [
+		"YusufEmin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.graphicspresets.GraphicsPresets"
+		],
+		"client": [
+			"com.example.graphicspresets.client.GraphicsPresetsClient"
+		]
+	},
+	"mixins": [
+		"graphics-presets.mixins.json",
+		{
+			"config": "graphics-presets.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
